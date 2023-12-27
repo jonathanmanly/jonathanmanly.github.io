@@ -5,7 +5,12 @@
 
 words **words** 
 
-`code`
+```
+code
+code
+code
+
+```
 
 
 [My LinkedIn Profile](https://www.linkedin.com/in/jonmanly/)
