@@ -1,6 +1,7 @@
 # Jon Manly
 ## test
 words
-(https://www.linkedin.com/in/jonmanly/)https://www.linkedin.com/in/jonmanly/
+[I'm an inline-style link](https://www.google.com)
+[My LinkedIn Profile](https://www.linkedin.com/in/jonmanly/)
 ## working file
 website
