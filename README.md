@@ -1,6 +1,6 @@
 # jonathanmanly.github.io
 ## test
 words
-link [www.yahoo.com]
+(https://www.linkedin.com/in/jonmanly/)https://www.linkedin.com/in/jonmanly/
 ## working file
 website
