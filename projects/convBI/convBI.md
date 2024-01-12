@@ -6,4 +6,4 @@ permalink: /projects/convBI/
 
 Hello, this is the convBI project page
 
-![BI Agent](convBIAgent.jpeg)
+![BI Agent](convBIAgent.jpeg | width = 100)
