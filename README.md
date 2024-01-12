@@ -19,4 +19,5 @@ code
 ## working file
 website
 
-[My Project](/convBI.md)
+[Projects](/projects)
+[Conversational BI](/projects/convBI/)
