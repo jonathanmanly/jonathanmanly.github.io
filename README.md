@@ -23,6 +23,4 @@
 
 ## Personal projects
 
-##[Projects](/projects)
-
-[Conversational BI](/projects/convBI/)
+[Conversational BI Project Page](/projects/convBI/) [github](https://github.com/jonathanmanly/convBI))
