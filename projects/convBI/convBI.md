@@ -20,17 +20,17 @@ For this initial demonstration, the Conversational BI application allows the use
 
 Here’s some screenshots of a discussion I had with the convBI agent about the Cars MPG dataset.
 
-<img src="convBIScreenShot1.jpg" width="450">
+<img src="convBIScreenShot1.jpg" width="550">
 
 
 Off to a good start.  Let’s filter the data and check that it worked.
 
-<img src="convBIScreenShot2.jpg" width="450">
+<img src="convBIScreenShot2.jpg" width="550">
 
 
 Interesting, because the LLM has access to the chat stream, it remembers that the fastest car is the ‘Cuda, and decides I’m not being specific enough in my request.
 
-<img src="convBIScreenShot3.jpg" width="450">
+<img src="convBIScreenShot3.jpg" width="550">
 
 Now that I’ve clarified my request convBI answers the question!  Let’s reset the filters and try some more complex requests.
         ◦ Conv BI extracts that there are 2 aggregate functions needed, and correctly discerns what to aggregate and what to group by.  The data is sent back to the LLM as a csv table, so the formatting is courtesy of OpenAI.
@@ -53,7 +53,7 @@ Now that I’ve clarified my request convBI answers the question!  Let’s reset
         ◦ Maximum mileage: 26.6 mpg
 Please note that these values represent the average and maximum mileage for cars with each respective number of cylinders.
 
-<img src="convBIScreenShot4.jpg" width="450">
+<img src="convBIScreenShot4.jpg" width="550">
 
 
 One final test – I ask for “the relationship” and the LLM correctly decides a regression would be a good way to do it.
