@@ -4,8 +4,9 @@ title: projects
 permalink: /projects/convBI/
 theme: jekyll-theme-hacker
 ---
-<img src="convBIAgent.jpeg" width="250" height="250">
-#Conversational BI
+#<img src="convBIAgent.jpeg" width="250" height="250">
+
+# Conversational BI
 
 All of our news feeds have been dominated by the amazing capabilities of conversational AI (artificial intelligence).  But for those of us in the business analytics field, how could we extened conversational AI to conversational BI (business intelligence).
 
@@ -14,10 +15,10 @@ For this project, I wanted to build an application that could demonstrate and ex
 This example runs using the classic Cars MPG dataset, but could be extended to other datasets or even to a full data warehouse.  The application has a number of query functions predefined in python.  These query function define how the data will be used, which would be useful in more complex data environments (ex. Using optimized joins), and/or where there is restricted data or personally identifiable data that would be undesirable as an output.  All data is held in the python application, and only outputs are sent to the LLM, which would help with both performance, token cost and data security concerns.
 
 For this initial demonstration, the Conversational BI application allows the user to :
-*Filter the data to subsets
-*Find top or bottom ranking record
-*Group by aggregation reports
-*Linear multiple regressions
+* Filter the data to subsets
+* Find top or bottom ranking record
+* Group by aggregation reports
+* Linear multiple regressions
 
 Here’s some screenshots of a discussion I had with the convBI agent about the Cars MPG dataset.
 
@@ -59,16 +60,16 @@ Please note that these values represent the average and maximum mileage for cars
 
 One final test – I ask for “the relationship” and the LLM correctly decides a regression would be a good way to do it.
 
-##How It Works
+## How It Works
 
 This approach makes use of the OpenAI api (running the 3.5-turbo model), and leverages function calling.  Function calling lets an application let the LLM know what functions it can request to be run on the host computer, and what parameters to extract in order to make such a request.  Functions are defined in a JSON package, and supplied as part of the context in the chat request to the API.  When the LLM detects that it is appropriate to ask for a function call, rather than respond directly, it reponds with a specific function call response, and provides a JSON package of the parameters.  ConvBI then runs the appropriate function, and returns the output to the LLM to get the final response for the chatbot.
 
-##Future improvements
+## Future improvements
 
-BI isn’t really BI without *data visualizations:* There’s no reason why some nice seaborn graphs couldn’t be added to this.
+BI isn’t really BI without **data visualizations:** There’s no reason why some nice seaborn graphs couldn’t be added to this.
 
-*Dynamic dataset chooser:(  A function could be built to let the user request a particular package from huggingface or kaggle datasets right through the UI, similarly to the way this applications lets the users filter and reset the dataset.
+**Dynamic dataset chooser:**  A function could be built to let the user request a particular package from huggingface or kaggle datasets right through the UI, similarly to the way this applications lets the users filter and reset the dataset.
 
-In order to build a more sophisticated application, a lot more functions could be needed.  Keeping the JSON definitions aligned with the python code increases the workload, and it’s really easy to make a typographical error in the JSON syntax.  The pydantic package allows generation of JSON directly from the function defintion, and I’m sold on using this next time.
+**More Functions:** In order to build a more sophisticated application, a lot more functions could be needed.  Keeping the JSON definitions aligned with the python code increases the workload, and it’s really easy to make a typographical error in the JSON syntax.  The pydantic package allows generation of JSON directly from the function defintion, and I’m sold on using this next time.
 
 
