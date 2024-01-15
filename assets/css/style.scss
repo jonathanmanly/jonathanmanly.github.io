@@ -5,6 +5,7 @@
 
 .wrapper {
   width:100%;
+  
   // left side is 270
   // 1200-270 = 930
   // 30px free room
@@ -12,7 +13,8 @@
 }
 
 section {
-  width:80%;
+  width:75%;
   float:right;
   padding-bottom:50px;
+  padding-left:25px;
 }
