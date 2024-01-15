@@ -1,5 +1,3 @@
-# Jon Manly
----
 
 ## LinkedIn
 [My LinkedIn Profile](https://www.linkedin.com/in/jonmanly/)
