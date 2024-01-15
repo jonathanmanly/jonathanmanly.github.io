@@ -62,6 +62,10 @@ One final test – I ask for “the relationship” and the LLM correctly decide
 
 This approach makes use of the OpenAI api (running the 3.5-turbo model), and leverages function calling.  Function calling lets an application let the LLM know what functions it can request to be run on the host computer, and what parameters to extract in order to make such a request.  Functions are defined in a JSON package, and supplied as part of the context in the chat request to the API.  When the LLM detects that it is appropriate to ask for a function call, rather than respond directly, it reponds with a specific function call response, and provides a JSON package of the parameters.  ConvBI then runs the appropriate function, and returns the output to the LLM to get the final response for the chatbot.
 
+## [See the code] (https://github.com/jonathanmanly/convBI)
+
+Clone the repo and try it out yourself!  You'll need to install dependencies, get an [OpenAI](https://openai.com/) API key, and put it in a config.ini file to make it run.
+
 ## Future improvements
 
 BI isn’t really BI without **data visualizations:** There’s no reason why some nice seaborn graphs couldn’t be added to this.
