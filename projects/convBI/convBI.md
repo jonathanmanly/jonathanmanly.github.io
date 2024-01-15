@@ -34,7 +34,10 @@ Interesting, because the LLM has access to the chat stream, it remembers that th
 
 Now that I’ve clarified my request convBI answers the question!  Let’s reset the filters and try some more complex requests.
         ◦ Conv BI extracts that there are 2 aggregate functions needed, and correctly discerns what to aggregate and what to group by.  The data is sent back to the LLM as a csv table, so the formatting is courtesy of OpenAI.
+        
+<img src="convBIScreenShot4.jpg" width="100%">
 
+Here's the full report it produced:
 
     • 3 cylinders:
         ◦ Average mileage: 20.55 mpg
@@ -53,7 +56,7 @@ Now that I’ve clarified my request convBI answers the question!  Let’s reset
         ◦ Maximum mileage: 26.6 mpg
 Please note that these values represent the average and maximum mileage for cars with each respective number of cylinders.
 
-<img src="convBIScreenShot4.jpg" width="100%">
+
 
 
 One final test – I ask for “the relationship” and the LLM correctly decides a regression would be a good way to do it.
