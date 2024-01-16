@@ -6,7 +6,7 @@ theme: jekyll-theme-hacker
 ---
 # Conversational BI
 
-All of our news feeds have been dominated by the amazing capabilities of conversational AI (artificial intelligence).  But for those of us in the business analytics field, how could we extened conversational AI to conversational BI (business intelligence).
+All of our news feeds have been dominated by the amazing capabilities of conversational AI (artificial intelligence).  But for those of us in the business analytics field, how could we extened conversational AI to conversational BI (business intelligence)?
 
 For this project, I wanted to build an application that could demonstrate and explore use of LLM technology as an interface to data, allowing a no-code approach to ad hoc queries, and presentation of information in natural language.
 
