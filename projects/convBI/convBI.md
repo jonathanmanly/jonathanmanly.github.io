@@ -56,10 +56,12 @@ Here's the full report it produced:
         ◦ Maximum mileage: 26.6 mpg
 Please note that these values represent the average and maximum mileage for cars with each respective number of cylinders.
 
-
+<img src="convBIScreenShot5.jpg" width="100%">
 
 
 One final test – I ask for “the relationship” and the LLM correctly decides a regression would be a good way to do it.
+
+
 
 ## How It Works
 
