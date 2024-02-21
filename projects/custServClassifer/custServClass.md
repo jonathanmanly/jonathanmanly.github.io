@@ -24,6 +24,8 @@ This example runs using the a data set of customer service inquiries across a nu
 
 In this project, I used the Huggingface library running on a python GPU environment.  The code is available in [this repo](https://github.com/jonathanmanly/custServiceLLM/blob/main/custservice_classifier.ipynb).
 
+This would be a fairly easy project for a fully-developed LLM such as ChatGPT to execute, potentially without any fine tuning (using few-shot or zero-shot learning).  I wanted to use a relatively small model, and simulate building a system that could be run on-site, without incurring token costs or sending company data to a third party.  I chose to use a fine-tuning approach using the [DistilBERT](https://huggingface.co/docs/transformers/en/model_doc/distilbert) pre-trained open source model.  Huggingface makes this pretty easy to instantiate a local copy of the model, adding a softmax classifier head with random weights on top.  Our job is to use the training data to train the weights in the new classification layer to make accurate predictions as to which category each customer service inquiry belongs to.
+
 
 
 Images here

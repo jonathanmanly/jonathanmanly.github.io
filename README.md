@@ -22,3 +22,4 @@
 ## Personal projects
 
 [Conversational BI Project Page](/projects/convBI/) and [github](https://github.com/jonathanmanly/convBI)
+[Customer Service Classifier Project Page](/projects/custServClassifier/) and [github](https://github.com/jonathanmanly/custServiceLLM)
