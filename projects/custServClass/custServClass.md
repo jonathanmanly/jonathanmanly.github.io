@@ -18,7 +18,38 @@ The goal of this project will be to automatically code customer service inquirie
 
 # Training Data
 
-This example runs using the a data set of customer service inquiries across a number of categories.  This is available in a [github repo](https://github.com/bitext/customer-support-llm-chatbot-training-dataset), and each of the inquiries is coded into one of X categories.  The training data also includes a reponse, and this will be used in [a different project.](/projects/custServClass)
+This example runs using the a data set of customer service inquiries across a number of categories.  This is available in a [github repo](https://github.com/bitext/customer-support-llm-chatbot-training-dataset), and each of the inquiries is coded into one of 27 categories.  The training data also includes a reponse, and this will be used in [a different project.](/projects/custServClass)
+
+Categories in dataset : 
+'''
+['edit_account',
+ 'switch_account',
+ 'check_invoice',
+ 'complaint',
+ 'contact_customer_service',
+ 'delivery_period',
+ 'registration_problems',
+ 'check_payment_methods',
+ 'contact_human_agent',
+ 'payment_issue',
+ 'newsletter_subscription',
+ 'get_invoice',
+ 'place_order',
+ 'cancel_order',
+ 'track_refund',
+ 'change_order',
+ 'get_refund',
+ 'create_account',
+ 'check_refund_policy',
+ 'review',
+ 'set_up_shipping_address',
+ 'delivery_options',
+ 'delete_account',
+ 'recover_password',
+ 'track_order',
+ 'change_shipping_address',
+ 'check_cancellation_fee']
+ '''
 
 # Approach
 
@@ -31,23 +62,23 @@ This would be a fairly easy project for a fully-developed LLM such as ChatGPT to
 I ran two versions of the fine tuning process, with different amounts of training data.  In the actual business project I was involved in, we did not have pre-coded data for our classifications, and we needed to ask a number of folks to manually code data.  I think this is a common situations for businesses taking on NLP projects, and so I ran a version of the project with a random sample of only 1,300 training records.  Alternatively, a company could have sufficient coding as part of their existing contact center process, in which case, you could have a lot of coded data available, so I also ran a version with over 18,000 training records.  In both cases, I held out a random sample to evaluate the model's progress during the training process.
 
 Both phases of the modeling converged very quickly and did a great job classifying the customer inquiries.  The small sample converged within less than X epochs, and was already running with X accuracy after only one pass!  By X epochs it converged at X accuracy, which while not perfect, is clearly good enough to work with in a business context and provide value.
-<img src="eval_acc_sm.jpg" width="100%">
+<img src="eval_acc_sm.png" width="100%">
 *confusion matrix 1*
 
 We can see in this confusion matrix that there are a couple of classes where the model had difficulty correctly classifying. Let's see what the effect of more data could do.
 
 
-<img src="eval_acc_lg.jpg" width="100%">
+<img src="eval_acc_lg.png" width="100%">
 
 Right out of the gate, the large dataset already achieved superior accuracy on the evaluation set with only one epoch (which of course was more expensive computationally due to the larger size).  Within 3 epochs the evaluation set accuracy was nearly perfect at X, and the confusion matrix does not show the issue from the smaller dataset!
 
-*confusion matrix 2*
+<img src="confusion_large.png" width="100%">
 
 # Application
 
-[Demo app]() on Huggingface spaces which uses my custom model to produce the top 3 categories, along with their softmax scores (essentially a confidence score).  I also use [this model]() to calculate sentiment without any customizations.
+[Demo app](https://huggingface.co/spaces/jonmanly/custServiceClassifier) on Huggingface spaces which uses my custom model to produce the top 3 categories, along with their softmax scores (essentially a confidence score).  I also use [this model]() to calculate sentiment without any customizations.
 
-Model is hosted on Huggingface if you'd like to download it to experiment with it in your own learnings.
+[The model](https://huggingface.co/jonmanly/custServiceClassifier) is hosted on [Huggingface](https://huggingface.co/) if you'd like to download it to experiment with it in your own learnings.
 
 One advantage over using a fine tuned LLM over a bag of words approach is it is more robust against unexpected language usage.  In the demo app, I added a couple of overly wordy inquiries, using language styles of Shakespeare and Capt. Jack Sparrow, neither of which appeared in the training data at all.  This is sort of an extreme test, but the model is able to make sense of both.  Try it out for yourself!
 
