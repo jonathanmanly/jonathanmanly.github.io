@@ -31,13 +31,13 @@ This would be a fairly easy project for a fully-developed LLM such as ChatGPT to
 I ran two versions of the fine tuning process, with different amounts of training data.  In the actual business project I was involved in, we did not have pre-coded data for our classifications, and we needed to ask a number of folks to manually code data.  I think this is a common situations for businesses taking on NLP projects, and so I ran a version of the project with a random sample of only 1,300 training records.  Alternatively, a company could have sufficient coding as part of their existing contact center process, in which case, you could have a lot of coded data available, so I also ran a version with over 18,000 training records.  In both cases, I held out a random sample to evaluate the model's progress during the training process.
 
 Both phases of the modeling converged very quickly and did a great job classifying the customer inquiries.  The small sample converged within less than X epochs, and was already running with X accuracy after only one pass!  By X epochs it converged at X accuracy, which while not perfect, is clearly good enough to work with in a business context and provide value.
-*training accuracy chart small*
+<img src="eval_acc_sm.jpg" width="100%">
 *confusion matrix 1*
 
 We can see in this confusion matrix that there are a couple of classes where the model had difficulty correctly classifying. Let's see what the effect of more data could do.
 
 
-*training accuracy chart large*
+<img src="eval_acc_lg.jpg" width="100%">
 
 Right out of the gate, the large dataset already achieved superior accuracy on the evaluation set with only one epoch (which of course was more expensive computationally due to the larger size).  Within 3 epochs the evaluation set accuracy was nearly perfect at X, and the confusion matrix does not show the issue from the smaller dataset!
 
@@ -52,4 +52,4 @@ Model is hosted on Huggingface if you'd like to download it to experiment with i
 One advantage over using a fine tuned LLM over a bag of words approach is it is more robust against unexpected language usage.  In the demo app, I added a couple of overly wordy inquiries, using language styles of Shakespeare and Capt. Jack Sparrow, neither of which appeared in the training data at all.  This is sort of an extreme test, but the model is able to make sense of both.  Try it out for yourself!
 
 
-#<img src="convBIScreenShot1.jpg" width="100%">
+#
