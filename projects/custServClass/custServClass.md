@@ -61,13 +61,13 @@ This would be a fairly easy project for a fully-developed LLM such as ChatGPT to
 
 I ran two versions of the fine tuning process, with different amounts of training data.  In the actual business project I was involved in, we did not have pre-coded data for our classifications, and we needed to ask a number of folks to manually code data.  I think this is a common situations for businesses taking on NLP projects, and so I ran a version of the project with a random sample of only 870 training records.  Alternatively, a company could have sufficient coding as part of their existing contact center process, in which case, you could have a lot of coded data available, so I also ran a version with over 18,000 training records.  In both cases, I held out a random sample to evaluate the model's progress during the training process.
 
-Both phases of the modeling converged very quickly and did a great job classifying the customer inquiries.  The small sample acheived neary 80% accuracy after only one pass!  By a few epochs it converged at over 95% accuracy, which while not perfect, is clearly good enough to work with in a business context and provide value.
+Both phases of the modeling converged very quickly and did a great job classifying the customer inquiries.  The small sample acheived neary 75.2% accuracy after only one pass!  After 6 epochs it converged at over 98.5% accuracy, which while not perfect, is clearly good enough to work with in a business context and provide value.
 
 <img src="eval_acc_smallSample.png" width="50%">
 
-*confusion matrix 1*
+<img src="confusion_small.png" width="50%">
 
-We can see in this confusion matrix that there are a couple of classes where the model had difficulty correctly classifying. Let's see what the effect of more data could do.
+We can see in this confusion matrix that there are a couple of classes where the model had difficulty correctly classifying (as shown by the few squares off the central line). It is confusion check_cancellation fee with cancel_order, and delete_account with cancel_order.  Let's see what the effect of more data could do...
 
 
 <img src="eval_acc_largeSample.png" width="50%">
