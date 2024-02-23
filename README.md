@@ -1,8 +1,5 @@
----
-layout: default
-title: Jon Manly
-theme: jekyll-theme-hacker
----
+## Jon Manly
+
 ## LinkedIn
 [My LinkedIn Profile](https://www.linkedin.com/in/jonmanly/)
 
