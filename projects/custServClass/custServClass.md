@@ -16,6 +16,10 @@ At a prior employer we once did a project to automatically triage and respond to
 
 The goal of this project will be to automatically code customer service inquiries into useful categories, and to measure the customer's sentiment.  These two pieces of information could be used in a business process to route the inquiry to an auto-responder, or to a human representative (ex. for angry customers with specific problems).
 
+**For example :**
+_My order has not been delivered yet.  Can you check the status of the shipment?_ coded as **TRACK ORDER, with NEGATIVE sentiment.**
+
+
 # Training Data
 
 This example runs using the a data set of customer service inquiries across a number of categories.  This is available in a [github repo](https://github.com/bitext/customer-support-llm-chatbot-training-dataset), and each of the inquiries is coded into one of 27 categories (below).  The training data also includes a reponse, and this will be used in [a different project.](/projects/custServClass)
